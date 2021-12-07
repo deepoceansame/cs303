@@ -50,3 +50,5 @@ if __name__ == '__main__':
     print("----------------------------------------------------------------")
     print("| %10s | %8.3f | %14.3f | %9.3f | %7.3f |" % ("LeNet-5", accuracy, infer_time * 1000, MACs / (1000 ** 2), params / (1000 ** 2)))
     print("----------------------------------------------------------------")
+
+# python test_lenet5.py --best-checkpoint ./checkpoints/LeNet5/epoch-6.pth
