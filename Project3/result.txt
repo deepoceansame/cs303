@@ -30,3 +30,5 @@ need 20 epoch to get a good model
 the best epoch is stored in the ./checkpoints/BestYourNetPoch it is the same with ./checkpoints/yournet_keepclear/epoch-18.pth
 there is a train_log.txt which stored ten train result. the result is stored in checkpoints
 there is a train_record that store one whole procedure of a train.
+
+if there is wrong in record of train_log, can use 3_getBestPochForYourNet.py to get the best epoch in a folder

@@ -34,7 +34,7 @@ if __name__ == '__main__':
         except RuntimeError:
             continue
         accuracy = get_accuracy(model, test_loader, device)
-        print(accuracy)
+        print(checkpoint, accuracy)
         if accuracy > the_accu:
             the_accu = accuracy
             the_checkpoint = checkpoint
