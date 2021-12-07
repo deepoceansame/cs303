@@ -1,11 +1,32 @@
 # Installation
+conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch  ----->paste from pytorch.org for using cuda
+requirements.txt is not used. But this may be needed thop==0.0.31-2005241907
 
 # The accuracy, infer time, MACs and params of reference model (LeNet-5)
-
+----------------------------------------------------------------
+| Model Name | Accuracy | Infer Time(ms) | Params(M) | MACs(M) |
+----------------------------------------------------------------
+|    LeNet-5 |    0.980 |          0.139 |     0.206 |   0.060 |
+----------------------------------------------------------------
 # The accuracy, infer time, MACs and params of your model (YourNet)
-
+----------------------------------------------------------------
+|   Model Name | Accuracy | Infer Time(ms) | Params(M) | MACs(M) |
+----------------------------------------------------------------
+|      YourNet |    0.989 |          0.130 |     0.051 |   0.014 |
+----------------------------------------------------------------
 # The command to run “./train_yournet.py”
-
+ python train_yournet.py --checkpoint-dir ./checkpoints/yournet100/ --epoch-end 20 --device cuda
 # The command to run “./test_yournet.py”
-
+ python test_yournet.py --best-checkpoint ./checkpoints/yournet_keepclear/epoch-18.pth
 # Others
+
+What is done:
+build a compact YourNet.py, a compact network and let it be the student.
+The provided pretrained LeNet5 is the teacher.
+When training student, use the MSEloss of logits(output) of teacher and student to decorate the loss(plus to the loss)
+After training, then there is a workable compact student model.
+
+need 20 epoch to get a good model
+the best epoch is stored in the ./checkpoints/BestYourNetPoch it is the same with ./checkpoints/yournet_keepclear/epoch-18.pth
+there is a train_log.txt which stored ten train result. the result is stored in checkpoints
+there is a train_record that store one whole procedure of a train.

@@ -56,7 +56,7 @@ def train_student(T_model, S_model, train_loader, test_loader):
             x = x.to(device)
             y = y.to(device)
             s_logits = S_model(x)
-            loss = get_loss(t_train_logits[i], s_logits, y, 1, 0.033)
+            loss = get_loss(t_train_logits[i], s_logits, y, 1, 0.05)
 
             optimizer.zero_grad()
             loss.backward()

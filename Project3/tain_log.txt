@@ -1,0 +1,17 @@
+first run: result in checkpoints/YourNet1 best 0.988 in epoch-17
+second run: result in checkpoints/yournet_keepclear best 0.989 in epoch-18 store it into BestYournetPoch
+third run: result in checkpoints/yournet2 best 0.987 in epoch-18
+forth run: result in checkpoints/yournet3 best 0.986 change T to 0.033 this time worse then change T back to 0.05
+fifth run: result in checkpoints/yournet4 best 0.988 in epoch-14 and 15
+sixth run: result in checkpoints/yournet5 best 0.984 in epoch-17
+seventh run: result in checkpoints/yournet6 best 0.987 in epoch-19
+eighth run: result in checkpoints/yournet7 best 0.987 in epoch-18
+ninth run: result in checkpoints/yournet8 best 0.987 in epoch-18 and 19
+tenth run: result in checkpoints/yournet9 best 0.988 in epoch-18
+
+run train_yournet.py
+each train is 20 epoch
+python train_yournet.py --checkpoint-dir ./checkpoints/XXX/ --epoch-end 20
+
+
+

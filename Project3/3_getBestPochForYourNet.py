@@ -9,13 +9,13 @@ python test_lenet5.py \
 import torch
 import os
 from torchvision import datasets, transforms
-from models.YourNet_discard import YourNet
+from models.YourNet import YourNet
 from eval.metrics import get_accuracy, get_infer_time, get_macs_and_params
 
 if __name__ == '__main__':
     batch_size = 64
     device = 'cuda'
-    dictionary = './checkpoints/YourNet/'
+    dictionary = './checkpoints/yournet_keepclear/'
     checkpoint_list = os.listdir(dictionary)
     test_loader = torch.utils.data.DataLoader(
         datasets.MNIST(root='./data', train=False,
