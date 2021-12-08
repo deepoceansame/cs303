@@ -38,4 +38,5 @@ if __name__ == '__main__':
         if accuracy > the_accu:
             the_accu = accuracy
             the_checkpoint = checkpoint
+    print()
     print(the_checkpoint, the_accu)

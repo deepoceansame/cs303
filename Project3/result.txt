@@ -32,3 +32,7 @@ After training, then there is a workable compact student model.
 4.There is a train_record that store one whole procedure of a train.
 
 if there is wrong in record of train_log, can use 3_getBestPochForYourNet.py to get the best epoch in a folder
+
+comparison of time: test 10 times
+yournet: 0.142 0.140 0.144 0.137 0.136 0.141 0.135 0.134 0.142 0.145 avg=0.1396
+lenet5:  0.144 0.143 0.137 0.139 0.144 0.143 0.142 0.137 0.135 0.135 avg=0.1399
