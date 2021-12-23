@@ -39,7 +39,7 @@ lenet5:  0.144 0.143 0.137 0.139 0.144 0.143 0.142 0.137 0.135 0.135 avg=0.1399
 
 
 
-
+content of train_log:
 first run: result in checkpoints/YourNet1 best 0.988 in epoch-17
 second run: result in checkpoints/yournet_keepclear best 0.989 in epoch-18 store it into BestYournetPoch
 third run: result in checkpoints/yournet2 best 0.987 in epoch-18
