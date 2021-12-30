@@ -1,0 +1,1 @@
+python test_yournet.py --best-checkpoint ./checkpoints/yournet_keepclear/epoch-18.pth

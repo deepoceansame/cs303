@@ -15,7 +15,7 @@ requirements.txt is not used. But this may be needed thop==0.0.31-2005241907
 |      YourNet |    0.989 |          0.130 |     0.051 |   0.014 |
 ----------------------------------------------------------------
 # The command to run “./train_yournet.py”
- python train_yournet.py --checkpoint-dir ./checkpoints/yournet100/ --epoch-end 20 --device cuda
+ python train_yournet.py --checkpoint-dir ./checkpoints/yournet100/ --epoch-end 20
 # The command to run “./test_yournet.py”
  python test_yournet.py --best-checkpoint ./checkpoints/yournet_keepclear/epoch-18.pth
 # Others
